@@ -1,8 +1,26 @@
 <html>
+<head>
+    <link rel="stylesheet" href="lib/css/bootstrap-theme.css.map">
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+     <link rel="stylesheet" href="style.css">
+    <script src="lib/js/jquery-2.2.0.js"></script>
+    <script src="lib/js/bootstrap.js"></script>
+    <script src="lib/js/angular.min.js"></script>
+    <script src="lib/js/ngGeolocation.js"></script>
+    <script src="mapController.js"></script>
 
-<body>
-
-    hello world
-    </body>
-
+    <script
+  src="http://maps.googleapis.com/maps/api/js"></script>
+</head>
+<body ng-app="myApp" ng-controller="geolocCtrl">
+    <h1>Basic (fetch once)</h1>
+    Latitude: {{myPosition.coords.latitude}}
+    <br />
+    Longitude: {{myPosition.coords.longitude}}
+    <br />
+    Timestamp: {{myPosition.timestamp}}
+   <button class="btn btn-default" ng-click="showMap(myPosition.coords.latitude,myPosition.coords.longitude)"> MAP</button>
+   <div id="map">
+    </div>
+</body>
 </html>
