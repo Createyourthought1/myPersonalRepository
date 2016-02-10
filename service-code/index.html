@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app='nothing'>
+
+<head>
+ <script  src="https://code.angularjs.org/1.4.9/angular.js" ></script>
+    <script src="service.js"></script>
+  <script src="script.js"></script>
+
+  <script src="loginCtrl.js"></script>
+</head>
+
+<body ng-controller='LoginCtrl'>
+  <h1>
+      <center>Angular js Training </center>
+    </h1>
+  <div >
+
+
+  <div ng-repeat="song in songs">
+     <ul>
+      <li>{{song.trackId}}</li>
+      </ul>
+
+      </div>
+</body>
+
+</html>
