@@ -1,0 +1,29 @@
+.navbar-header{
+   background-color:azure;
+    max-height:100%;
+}
+#mainDiv{
+    background-color: aqua;
+}
+.links {
+   display:block;
+   margin-left: 90%;
+ color:black;
+}
+#mainDiv .account{
+      background-color:azure;
+}
+.left{
+   
+    width:13.5%;
+    height:900%;
+    background-color: cornflowerblue;
+    float:right;
+}
+a{
+    color:white;
+}
+.row{
+    
+    background-color: orangered;
+}
