@@ -1,51 +1,53 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-       
-       <link rel="stylesheet" href="lib/css/bootstrap.min.css">
-     <script src="lib/js/jquery-2.2.0.js"></script> 
-         <script src="lib/js/bootstrap.js"></script> 
-           <script src="lib/js/angular.min.js"></script> 
-      <script src="imageFactory.js"></script> 
-    <script src="shoppingCart-controller.js"></script>
- 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <!DOCTYPE HTML>
+    <html>
+    <head>
 
-<body ng-app="shoppingCart" ng-controller="shoppingCart-controller"> 
-    <div id="mainDiv" class="navbar navbar-primary">
-    <div class="navbar-header">
-<h1 class=" navbar-brand"> Dream And Achieve</h1>
-     </div>
-        <div class="account">
-    <a href="#" class="links">SignUp</a><a href="#" class="links">SignIN</a>
+           <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+         <script src="lib/js/jquery-2.2.0.js"></script> 
+             <script src="lib/js/bootstrap.js"></script> 
+               <script src="lib/js/angular.min.js"></script> 
+          <script src="imageFactory.js"></script> 
+        <script src="shoppingCart-controller.js"></script>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body ng-app="shoppingCart" ng-controller="shoppingCart-controller">
+        <div id="mainDiv" class="navbar navbar-primary">
+        <div class="navbar-header">
+    <h1 class="navbar-brand">Dream And Achieve</h1>
+         </div>
+        <ul class="account" >
+            <div class="col-md-12">
+       <a class="btn btn-default links" href="#signUpForm"  >SignUp</a>
+    <a  class="btn btn-default links" href="#signInForm">SignIN</a> 
+        </div>        
+          </ul>     
        </div>
-        
- </div>
-  
-            
-            </div>
-      <div class="row">
-    <div ng-repeat="image1 in image"class="col-md-5" >
-   
-    <img src=" {{image1.imageUrl}}" >
-     
-    </div>
-           <div class="left">
-                  <h4>come join us</h4>
-            <a href="#">Travel Details</a><br>
-            
-            <a href="#"> Holiday Package</a><br>
-            From:<input class="dropdown"> 
-                To:<input type="dropdown">
-                <button class="btn btn-default">submit</button>
-            
-            </div>
-     </div>
-        
-            
-           
- </body>
+       
+       
+        <div class="row">
+              <div class="left col-md-4">
+                      <h4>come join us</h4>
+                <a href="#">Travel Details</a><br>
+
+                <a href="#"> Holiday Package</a><br>
+                From:<input class="dropdown"> 
+                    To:<input type="dropdown">
+                    <button class="btn btn-default submit">submit</button>
+
+                </div>
+        <div ng-repeat="image1 in image" class="col-md-5 images" >
+
+        <img src=" {{image1.imageUrl}}" >
+
+        </div>
+
+         </div>
+
+
+
+     </body>
 
 
 

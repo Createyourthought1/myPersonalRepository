@@ -1,24 +1,31 @@
-.navbar-header{
-   background-color:azure;
-    max-height:100%;
-}
+
 #mainDiv{
-    background-color: aqua;
+   
+    background-color: orangered;
+
+   
 }
-.links {
-   display:block;
-   margin-left: 90%;
- color:black;
+
+.account{
+float:right;
+ margin-top: 25px;
+    
+ 
+
 }
-#mainDiv .account{
-      background-color:azure;
+.submit{
+    margin-top: 5px;
+    
 }
 .left{
    
     width:13.5%;
     height:900%;
+    padding-left: 6px;
+     padding-right: 7px;
     background-color: cornflowerblue;
     float:right;
+ 
 }
 a{
     color:white;
@@ -26,4 +33,7 @@ a{
 .row{
     
     background-color: orangered;
+}
+.images{
+    margin-top:0px;
 }
