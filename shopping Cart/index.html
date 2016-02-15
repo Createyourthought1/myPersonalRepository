@@ -4,44 +4,62 @@
 
            <link rel="stylesheet" href="lib/css/bootstrap.min.css">
          <script src="lib/js/jquery-2.2.0.js"></script> 
-             <script src="lib/js/bootstrap.js"></script> 
-               <script src="lib/js/angular.min.js"></script> 
+            <script src="lib/js/bootstrap.js"></script> 
+            <script src="lib/js/angular.min.js"></script> 
           <script src="imageFactory.js"></script> 
         <script src="shoppingCart-controller.js"></script>
 
         <link rel="stylesheet" href="style.css">
     </head>
 
-    <body ng-app="shoppingCart" ng-controller="shoppingCart-controller">
-       <div class="row">
-             <div id="mainDiv" class="navbar navbar-primary">
+    
+        <body ng-app="shoppingCart" ng-controller="shoppingCart-controller">
+        
+      
+            
+         <div id="mainDiv" class="navbar navbar-primary">
         <div class="navbar-header">
     <h1 class="navbar-brand">Dream And Achieve</h1>
          </div>
+                 
         <ul class="account" >
             <div class="col-md-12">
-       <a class="btn btn-default links" href="#signUpForm"  >SignUp</a>
+       <a class="btn btn-default links" href="#signUpForm" ng-click="isSignUpFormOpen = !isSignUpFormOpen">SignUp</a>
+               
     <a  class="btn btn-default links" href="#signInForm">SignIN</a> 
-        </div>        
-          </ul>     
+        </div>  
+             <div ng-show="isSignUpFormOpen" id="signUpForm" class="form">
+               <div class="boxed col-md-5" >
+             username:<input type="text" ng-model="user.name"><br>
+            password:<input type="password" ng-model="user.password"><br>
+            email:<input type="email" ng-model="user.email">
+        <button class="btn btn-default register" ng-click="pushUserData()">register</button>
+                 </div>
+            </div> 
+          </ul>
+              
        </div>
-              <div class="left col-md-4">
+               
+
+            
+            <div class="left col-md-5">
                       <h4>come join us</h4>
                 <a href="#">Travel Details</a><br>
 
                 <a href="#"> Holiday Package</a><br>
-                From:<input class="dropdown"> 
-                    To:<input type="dropdown">
+                From:<input class="dropdown"> <br>
+                    To:<input type="dropdown"><br>
                     <button class="btn btn-default submit">submit</button>
-
+{{user.name}}
                 </div>
-        <div ng-repeat="image1 in image" class="col-md-5 images" >
+        
+<div ng-repeat="image1 in image" class="col-md-5">
 
-        <img src=" {{image1.imageUrl}}" >
+        <img src=" {{image1.imageUrl}}">
 
         </div>
 
-         </div>
+       
 
 
 

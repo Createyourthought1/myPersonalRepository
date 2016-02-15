@@ -3,11 +3,9 @@
    
     background-color: orangered;
 padding:6px;
-   margin-bottom: 0px;
+
 }
-.navbar-header{
-    
-}
+
 .account{
 float:right;
  margin-top: 25px;
@@ -19,16 +17,37 @@ float:right;
     margin-top: 5px;
     
 }
+.register{
+    margin-top: 5px;
+    
+}
 .left{
    
-    width:13.5%;
-    height:900%;
-    padding-left: 6px;
+    width:200px;
+    height:215px;
+ border:2px solid black;
+    padding-left: 5px;
      padding-right: 7px;
+    position: relative;
+   right:21px;
     background-color: cornflowerblue;
     float:right;
+    
  
 }
+.boxed{
+   width:200px;
+   height:200px;
+    border:2px solid black;
+    margin-top:48px;
+    background-color: cornflowerblue;
+    margin-right:48px;
+    position: absolute;
+    right:41px;
+    z-index:2;
+
+}
+
 a{
     color:white;
 }
@@ -36,6 +55,9 @@ a{
     
     background-color: orangered;
 }
-.images{
-    margin-top:0px;
+ img{
+  
+  border:2px solid black;
+    width:100%;
+     margin-bottom:10px;
 }
