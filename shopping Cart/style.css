@@ -2,10 +2,12 @@
 #mainDiv{
    
     background-color: orangered;
-
-   
+padding:6px;
+   margin-bottom: 0px;
 }
-
+.navbar-header{
+    
+}
 .account{
 float:right;
  margin-top: 25px;
