@@ -30,9 +30,11 @@
         </div>  
              <div ng-show="isSignUpFormOpen" id="signUpForm" class="form">
                <div class="boxed col-md-5" >
+                   <form>
              username:<input type="text" ng-model="user.name"><br>
             password:<input type="password" ng-model="user.password"><br>
-            email:<input type="email" ng-model="user.email">
+            email:<input type="email" ng-model="user.email"></form>
+                
         <button class="btn btn-default register" ng-click="pushUserData()">register</button>
                  </div>
             </div> 
