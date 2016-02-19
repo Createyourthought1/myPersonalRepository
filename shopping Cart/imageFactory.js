@@ -9,11 +9,19 @@ app.factory("imageFactory",function($http){
        
     var pushArray=function(user){
         compiledData.push(user);
-        console.log(compiledData.length);
+        console.log(compiledData);
         return(compiledData);
     };
     
-var pushJson=function (data,filename) {
+    var pushNewEntry=function(response){
+        
+         $http.post("members.json", data).success(response);
+        
+        
+        
+    };
+
+    var pushJson=function (data,filename) {
 
  if (!data) {
     console.error('No data');
@@ -41,10 +49,12 @@ var pushJson=function (data,filename) {
         
         
 };
+    
     return{
     jsonData:jsonData ,  
     pushArray: pushArray,
-        pushJson:pushJson
+    pushJson:pushJson,
+    pushNewEntry: pushNewEntry
     }   ;
  
     

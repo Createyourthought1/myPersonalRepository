@@ -1,7 +1,7 @@
 
 app.controller("shoppingCart-controller",function(imageFactory,$scope){
-
-   $scope.compiledData=[];
+ var compiledData=[];
+  
     imageFactory.jsonData(function(response){
        
         $scope.image=response;
@@ -9,35 +9,18 @@ app.controller("shoppingCart-controller",function(imageFactory,$scope){
     });
     
   $scope.pushUserData=function(){ 
-      $scope.compiledData=imageFactory.pushArray($scope.user);
-      console.log( $scope.compiledData.length);
+      console.log($scope.user);
+     var dummyuser=angular.copy($scope.user);
+   compiledData.push(dummyuser);
+     
+          
+      console.log(compiledData.length);
    
-        imageFactory.pushJson($scope.compiledData);
+     imageFactory.pushJson(compiledData);
     
+  }
   
 
       $scope.user=null;
       
-};
-$scope.addMember = function($http){
-            $http.post('members.json', $scope.user).
-
-                success(function(data){
-                    console.log('added ' + data);
-                    $scope.formData = {};
-                  
-                    $scope.members.push(data);
-
-                })
-                .error(function(data){
-                    console.log('Error: ' + data);
-                });
-                $location.path('/members');
-
-        /*});*/
-
-    };
-  
-    
-    
 });
